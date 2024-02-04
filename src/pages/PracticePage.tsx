@@ -50,6 +50,7 @@ const PracticePage = ({ onStopPractice, selectedChords, interval }: Props) => {
         <Page
             title="Practicing"
             actions={<Button onClick={onStopPractice}>Stop practice</Button>}
+            size="fullwidth"
         >
             <Stack>
                 <Inline flex={[1]} mt={40}>

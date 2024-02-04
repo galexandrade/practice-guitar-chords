@@ -55,6 +55,7 @@ const SelectionPage = ({
                     <IconRepeat /> Practice selected chords
                 </Button>
             }
+            size="fullwidth"
         >
             <Stack mt={40}>
                 <Stack mt={20}>
