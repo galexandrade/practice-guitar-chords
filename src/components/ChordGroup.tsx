@@ -4,13 +4,14 @@ type Props = {
     chords: string[];
     onChordClick: (chord: string) => void;
     selectedChords: string[];
+    title: string;
 };
 
-const ChordGroup = ({ chords, onChordClick, selectedChords }: Props) => {
+const ChordGroup = ({ chords, onChordClick, selectedChords, title }: Props) => {
     return (
         <Stack mt={20}>
-            <Text as="h3">Basic chords</Text>
-            <Inline flex={chords.map(() => 1)}>
+            <Text as="h3">{title}</Text>
+            <Inline flex={chords.map(() => 1)} flexWrap="wrap">
                 {chords.map((chord) => (
                     <Card
                         onClick={() => onChordClick(chord)}

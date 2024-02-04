@@ -86,16 +86,19 @@ const SelectionPage = ({
                     chords={basicChords}
                     onChordClick={handleChordClick}
                     selectedChords={selectedChords}
+                    title="Basic chords"
                 />
                 <ChordGroup
                     chords={minorChords}
                     onChordClick={handleChordClick}
                     selectedChords={selectedChords}
+                    title="Minor chords"
                 />
                 <ChordGroup
                     chords={seventhChords}
                     onChordClick={handleChordClick}
                     selectedChords={selectedChords}
+                    title="Seventh chords"
                 />
             </Stack>
         </Page>
