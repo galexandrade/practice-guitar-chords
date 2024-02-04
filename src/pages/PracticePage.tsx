@@ -1,6 +1,7 @@
 import {
     Button,
     Card,
+    IconTimes,
     Inline,
     Page,
     ProgressBar,
@@ -47,11 +48,7 @@ const PracticePage = ({ onStopPractice, selectedChords, interval }: Props) => {
     }, [interval, timer, practicingChord, selectedChords]);
 
     return (
-        <Page
-            title="Practicing"
-            actions={<Button onClick={onStopPractice}>Stop practice</Button>}
-            size="fullwidth"
-        >
+        <Page title="Practicing" size="fullwidth">
             <Stack>
                 <Inline flex={[1]} mt={40}>
                     <Card>
@@ -66,6 +63,14 @@ const PracticePage = ({ onStopPractice, selectedChords, interval }: Props) => {
                         maxValue={INTERVAL_MAP[interval]}
                     />
                 </Inline>
+                <Button
+                    onClick={onStopPractice}
+                    size="full-width"
+                    theme="hollow"
+                >
+                    <IconTimes />
+                    Stop practice
+                </Button>
             </Stack>
         </Page>
     );
